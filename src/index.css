@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  /* Sacramento Green Palette */
+  --color-sacramento: #043927;
+  --color-sacramento-light: #165b44;
+  --color-sacramento-dark: #022016;
+  --color-sacramento-deep: #01110b;
+  --color-sacramento-bright: #10b981; /* Accent emerald to make it interactive */
+  
+  /* Radii, Animations or shadows if required */
+  --shadow-glow: 0 0 25px rgba(16, 185, 129, 0.2);
+  --shadow-white-glow: 0 0 35px rgba(255, 255, 255, 0.15);
+}
+
+/* Base scrollbar styles for command center feel */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-sacramento-deep);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-sacramento-light);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-sacramento-bright);
+}
+
+body {
+  background-color: var(--color-sacramento-deep);
+  color: #f3f4f6;
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+}
+
+/* Customized Keyframes for Orbital & Core command center */
+@keyframes dash {
+  from {
+    stroke-dashoffset: 60;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.animate-pulse-dash {
+  animation: dash 5s linear infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(0.5deg);
+  }
+}
+
+.animate-float-slow {
+  animation: float 8s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+  animation: float 10s ease-in-out infinite 2s;
+}
+
+.animate-float-fast {
+  animation: float 6s ease-in-out infinite 1s;
+}
+
+@keyframes subtle-glow {
+  0%, 100% {
+    opacity: 0.35;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.55;
+    transform: scale(1.05);
+  }
+}
+
+.animate-radial-spotlight {
+  animation: subtle-glow 12s ease-in-out infinite;
+}
+
+

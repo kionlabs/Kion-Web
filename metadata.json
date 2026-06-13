@@ -1,0 +1,6 @@
+{
+  "name": "AI Control Tower",
+  "description": "An interactive Centered Radial Command Center for AI Education, Custom Development, Data Analysis, and Competitions, styled in a deep Sacramento Green theme.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
