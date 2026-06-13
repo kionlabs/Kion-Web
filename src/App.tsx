@@ -25,13 +25,14 @@ import { PanelData, SystemStatus, InterfaceSettings } from './types';
 const INITIAL_PANELS: PanelData[] = [
   {
     id: 'education',
-    title: 'AI Education Core',
-    subtitle: 'Learning Curriculum & prompt lab',
-    description: 'Empowering enterprise partners with custom training circuits, fine-tuning structures, and prompt sandbox environments.',
-    tag: 'LEARNING LAB',
+    title: 'AI 리터러시 & 팀 성장 트랙',
+    subtitle: '커ри큘럼 설계 및 맞춤형 워크숍 프로그램',
+    description: '사내 AI 공화 언어 구축 프로그램 및 자동화 트레이닝 과정으로, 임직원의 실무 AI 활용 능력을 비약적으로 발동시키는 실습형 교육 연구실입니다.',
+    tag: 'AI 리터러시 교육 및 워크숍',
     stats: [
-      { label: 'Enrolled', value: '1,420 Users' },
-      { label: 'Skill Modules', value: '12 Dynamic' }
+      { label: '사내 AI 언어 구축', value: '지원 완료' },
+      { label: '자동화 워크숍', value: '누적 35회' },
+      { label: '임직원 리터러시', value: '92% 달성' }
     ],
     depth: 'background',
     blur: 2.5,
@@ -42,13 +43,14 @@ const INITIAL_PANELS: PanelData[] = [
   },
   {
     id: 'development',
-    title: 'Custom Dev Studio',
-    subtitle: 'Agent pipelines & code generation',
-    description: 'Constructing scalable LLM orchestrations, semantic caching layers, and real-time custom API integrations.',
-    tag: 'INTELLIGENT AGENTS',
+    title: '에이전트 개발 스튜디오',
+    subtitle: '지능형 자동화 파이프라인 및 사설 백엔드',
+    description: '기업의 복잡한 업무 프로세스를 자동화 앱으로 재개발하고, 데이터 흐름에 실시간 밀착 반응하는 최적의 통합 내부 도구 인프라를 지휘합니다.',
+    tag: '업무 자동화 및 개발 스튜디오',
     stats: [
-      { label: 'Active Runtimes', value: '148 Nodes' },
-      { label: 'Pipeline Health', value: '100.0%' }
+      { label: '업무 자동화 앱', value: '12개 완료' },
+      { label: '데이터 기반 내부 도구', value: '8개 가동' },
+      { label: '평균 개발 주기', value: '18일 완성' }
     ],
     depth: 'midground',
     blur: 1.0,
@@ -59,13 +61,14 @@ const INITIAL_PANELS: PanelData[] = [
   },
   {
     id: 'analysis',
-    title: 'Analytical Insight Engine',
-    subtitle: 'Data pipeline audits & telemetry',
-    description: 'Tracking visual graph analyses, request throughput metrics, hourly spend charts, and code optimization suites.',
-    tag: 'TELEMETRY HUBS',
+    title: '데이터 원격 인프라 분석기',
+    subtitle: '초고속 데이터 기획 및 시범 운영 최적화',
+    description: '문화데이터 공모전 프로젝트의 압도적인 대상 수상 이력 등 검증된 MVP 자율 Fast Build 역량을 동원하여 PoC 완료율을 극한으로 수렴시킵니다.',
+    tag: '공모전 및 MVP 개발',
     stats: [
-      { label: 'Throughput', value: '1.2M req/hr' },
-      { label: 'Latency Margin', value: '14ms Avg' }
+      { label: '문화데이터 공모전', value: '성공 완료' },
+      { label: '프로젝트 PoC', value: '완성 입증' },
+      { label: 'MVP Fast Build', value: '자율 가동' }
     ],
     depth: 'foreground',
     blur: 0,
@@ -76,13 +79,14 @@ const INITIAL_PANELS: PanelData[] = [
   },
   {
     id: 'competition',
-    title: 'AI Arena Matrix',
-    subtitle: 'Benchmark racing & duels',
-    description: 'Simulating competitive model weights face-to-face across logic accuracy, speed factors, and reasoning sweeps.',
-    tag: 'RACERS & ARENAS',
+    title: 'AI 아레나 검증 매트릭스',
+    subtitle: '정합성 기반 실시간 경쟁 분석 매커니즘',
+    description: '블로그 및 네이버 플레이스 데이터의 정밀 실시간 경쟁 구도를 파악하고, 예측 고객의 액션 전환 신호를 자율 분석하여 마케팅 무결 지형을 다룹니다.',
+    tag: '경쟁 비교 분석 및 탐지',
     stats: [
-      { label: 'Live Tourneys', value: '31 Active' },
-      { label: 'Top Contender', value: 'Gemini 2.5' }
+      { label: '블로그/플레이스 경쟁', value: '정교 분석' },
+      { label: '전환 신호 분석', value: '추적 실증' },
+      { label: '추론 예측 정확도', value: '99.1%' }
     ],
     depth: 'midground',
     blur: 1.5,
@@ -338,14 +342,14 @@ export default function App() {
           <div>
             <div className="flex items-center gap-2">
               <h1 className="text-sm font-display font-black uppercase tracking-wider text-white">
-                NEXUS AI SYSTEMS
+                KION Labs 통합 지휘 관제탑 (KION LABS CORE)
               </h1>
               <span className="text-[9px] font-mono px-1.5 py-0.5 rounded bg-sacramento-light/40 border border-sacramento-bright/35 text-sacramento-bright">
-                CON-TOWER v2.9
+                KION v2.9
               </span>
             </div>
             <p className="text-[10px] font-mono text-slate-500 mt-0.5">
-              SECURE COMMAND PORTAL // SACRAMENTO LUXURY INTERFACE
+              교육 및 공모전 관제 포털 // 새크라멘토 프리미엄 통합 인터페이스
             </p>
           </div>
         </div>
@@ -354,23 +358,23 @@ export default function App() {
         <div className="flex flex-wrap items-center gap-4 md:gap-6 text-[11px] font-mono">
           <div className="flex items-center gap-2">
             <span className="w-2 h-2 rounded-full bg-sacramento-bright animate-ping" />
-            <span className="text-slate-400">CORE NETWORK:</span>
-            <span className="text-emerald-400 font-bold">100% ONLINE</span>
+            <span className="text-slate-400">워크숍 평점 (SAT):</span>
+            <span className="text-emerald-400 font-bold">4.95 / 5.0</span>
           </div>
           
           <div className="hidden sm:flex items-center gap-1.5">
-            <span className="text-slate-500">RTT:</span>
-            <span className="text-white font-bold">{systemState.networkLatency}ms</span>
+            <span className="text-slate-500">개발 완결 속도 (SPEED):</span>
+            <span className="text-white font-bold">{(18 + (systemState.networkLatency % 3) * 0.1).toFixed(1)}일 완성</span>
           </div>
 
           <div className="flex items-center gap-1.5">
-            <span className="text-slate-500">CORE LOAD:</span>
-            <span className="text-white font-bold">{systemState.cpuLoad.toFixed(1)}%</span>
-            <span className="text-[10px] text-slate-500">({systemState.memoryUsage.toFixed(1)}GB)</span>
+            <span className="text-slate-500">MVP 고속 전환율 (MVP):</span>
+            <span className="text-white font-bold">{Math.round(92 + (systemState.cpuLoad / 10))}개 구축</span>
+            <span className="text-[10px] text-slate-500">({(systemState.memoryUsage * 30).toFixed(0)}명 수료)</span>
           </div>
 
           <div className="flex items-center gap-1.5 border-l border-sacramento-light/40 pl-4">
-            <span className="text-slate-500">VIEW MODE:</span>
+            <span className="text-slate-500">관제 모드:</span>
             <div className="flex rounded overflow-hidden border border-sacramento-light/45">
               <button
                 onClick={() => {
@@ -383,7 +387,7 @@ export default function App() {
                     : 'bg-sacramento-deep text-slate-400 hover:text-white'
                 }`}
               >
-                Hologram
+                입체 홀로그램
               </button>
               <button
                 onClick={() => {
@@ -396,7 +400,7 @@ export default function App() {
                     : 'bg-sacramento-deep text-slate-400 hover:text-white'
                 }`}
               >
-                Grid
+                평면 그리드
               </button>
             </div>
           </div>
@@ -428,7 +432,7 @@ export default function App() {
                 <span className="text-[10px] font-mono text-sacramento-bright bg-sacramento-light/20 px-2 py-0.5 rounded font-black tracking-widest">
                   {panels[0].tag}
                 </span>
-                <span className="text-[10px] font-mono text-slate-600 block">Z // BACKGROUND (FAR)</span>
+                <span className="text-[10px] font-mono text-slate-600 block">Z // 원거리 배경 노드</span>
               </div>
               
               <h2 className="text-base font-display font-extrabold tracking-wide text-white flex items-center gap-2">
@@ -441,11 +445,11 @@ export default function App() {
               </p>
 
               {/* Panel stats */}
-              <div className="grid grid-cols-2 gap-2 mt-4 pt-3.5 border-t border-sacramento-light/20 text-[10px] font-mono">
+              <div className="grid grid-cols-3 gap-1 mt-4 pt-3.5 border-t border-sacramento-light/20 text-[9px] font-mono leading-tight">
                 {panels[0].stats.map(s => (
                   <div key={s.label}>
-                    <span className="text-slate-600 block">{s.label}</span>
-                    <span className="text-slate-300 font-bold block mt-0.5">{s.value}</span>
+                    <span className="text-slate-500 block truncate" title={s.label}>{s.label}</span>
+                    <span className="text-sacramento-bright font-extrabold block mt-0.5 truncate" title={s.value}>{s.value}</span>
                   </div>
                 ))}
               </div>
@@ -469,7 +473,7 @@ export default function App() {
                 <span className="text-[10px] font-mono text-emerald-400 bg-sacramento-light/20 px-2 py-0.5 rounded font-black tracking-widest">
                   {panels[1].tag}
                 </span>
-                <span className="text-[10px] font-mono text-slate-600 block flex items-center">Z // MIDGROUND</span>
+                <span className="text-[10px] font-mono text-slate-600 block flex items-center">Z // 중간 스페이스 노드</span>
               </div>
               
               <h2 className="text-base font-display font-extrabold tracking-wide text-white flex items-center gap-2">
@@ -482,11 +486,11 @@ export default function App() {
               </p>
 
               {/* Panel stats */}
-              <div className="grid grid-cols-2 gap-2 mt-4 pt-3.5 border-t border-sacramento-light/20 text-[10px] font-mono">
+              <div className="grid grid-cols-3 gap-1 mt-4 pt-3.5 border-t border-sacramento-light/20 text-[9px] font-mono leading-tight">
                 {panels[1].stats.map(s => (
                   <div key={s.label}>
-                    <span className="text-slate-600 block">{s.label}</span>
-                    <span className="text-slate-300 font-bold block mt-0.5">{s.value}</span>
+                    <span className="text-slate-500 block truncate" title={s.label}>{s.label}</span>
+                    <span className="text-[#10b981] font-extrabold block mt-0.5 truncate" title={s.value}>{s.value}</span>
                   </div>
                 ))}
               </div>
@@ -498,18 +502,18 @@ export default function App() {
               id="system-core-beacon"
               className="md:absolute md:top-1/2 md:left-1/2 md:-translate-x-1/2 md:-translate-y-1/2 w-full max-w-lg md:max-w-xl text-center px-4 py-8 pointer-events-auto z-20 flex flex-col items-center justify-center animate-float-slow"
             >
-              <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-sacramento-light/25 border border-sacramento-bright/40 rounded-full mb-3.5 shadow-glow text-[10px] text-white font-mono tracking-widest uppercase animate-pulse">
-                <span className="w-2 h-2 rounded-full bg-sacramento-bright inline-block" />
-                SYSTEM CENTRAL CONSOLE COGNITION
+              <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 bg-amber-500/10 border border-amber-400/30 rounded-full mb-3 shadow-[0_0_12px_rgba(245,158,11,0.15)] text-[9.5px] text-amber-200 font-sans tracking-wider font-extrabold uppercase animate-pulse">
+                <span className="w-1.5 h-1.5 bg-amber-400 rounded-full inline-block" />
+                시스템 중앙 관제센터
               </div>
 
-              <h1 className="text-3xl md:text-5xl font-display font-black text-white leading-tight tracking-tight uppercase">
-                INTELLIGENT <br className="hidden md:block"/>
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-100 via-white to-emerald-300 drop-shadow-[0_0_20px_rgba(255,255,255,0.15)]">NEXUS SYSTEM</span>
+              <h1 className="text-3xl md:text-5xl font-display font-black text-white leading-tight tracking-tight uppercase font-sans">
+                KION Labs <br className="hidden md:block"/>
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-100 via-white to-emerald-300 drop-shadow-[0_0_20px_rgba(255,255,255,0.15)] text-lg sm:text-xl md:text-2xl font-extrabold tracking-normal">AI 교육과 커스텀 개발의 통합 관제소</span>
               </h1>
 
-              <p className="text-xs md:text-sm text-slate-400 mt-4 max-w-md mx-auto leading-relaxed font-sans font-medium">
-                Symmetrically orchestrating high-fidelity pipelines to empower local learning nodes, automated pipelines, visual audits, and arena tests.
+              <p className="text-xs md:text-sm text-slate-400 mt-4 max-w-md mx-auto leading-relaxed font-sans font-medium font-bold">
+                KION Labs가 지휘하는 차세대 교육 및 지능형 개발 환경으로, 구성원 맞춤 리터러시 훈련 트랙과 실무 자동화 에이전트 구축 프로세스를 한자리에서 조감 및 통제합니다.
               </p>
 
               {/* System trigger and core controls */}
@@ -518,13 +522,13 @@ export default function App() {
                   onClick={handleCalibrationSweep}
                   className="bg-white text-sacramento-deep px-5 py-2.5 rounded-lg text-xs font-sans font-extrabold tracking-wider hover:bg-sacramento-bright hover:shadow-glow transition-all active:scale-95 cursor-pointer uppercase"
                 >
-                  Calibrate System Wires
+                  인프라 네트워크 망 보정
                 </button>
                 <button
-                  onClick={() => alert(`AI Control Tower System Architecture:\nTheme: Sacramento Green (#043927)\nRadial satellites arranged symmetrically.\nMouse translation scales dynamically off mouse distances from the center.`)}
+                  onClick={() => alert(`KION Labs 관제 플랫폼 아키텍처:\n테마: 프리미엄 새크라멘토 그린 (#043927) & 골드 포인트\n대칭 방사형 3D 패널 배치 완료.\n마우스 움직임에 반응해 패럴랙스 심도가 자율 가변 조정됩니다.`)}
                   className="bg-sacramento-light/50 border border-sacramento-light text-slate-200 px-4 py-2.5 rounded-lg text-xs font-mono font-medium hover:bg-sacramento-light hover:text-white transition-all active:scale-95"
                 >
-                  SYSTEM SPECS
+                  시스템 상세 제어구조
                 </button>
               </div>
 
@@ -532,7 +536,7 @@ export default function App() {
               <div className="flex items-center gap-4 mt-6 bg-sacramento-dark/40 py-2.5 px-4 rounded-xl border border-sacramento-light/20 text-[10px] font-mono text-slate-500 w-full max-w-xs md:max-w-md">
                 <Sliders className="w-4.5 h-4.5 text-sacramento-bright shrink-0" />
                 <div className="flex-1 flex items-center justify-between gap-2">
-                  <span className="truncate">Orbital Parallax Strength:</span>
+                  <span className="truncate">마우스 반응형 패럴랙스 강도:</span>
                   <input
                     type="range"
                     min="0"
@@ -548,7 +552,7 @@ export default function App() {
 
               <div className="text-[10px] text-slate-600 font-mono mt-4 flex items-center gap-1.5 justify-center">
                 <MousePointerClick className="w-3 h-3 text-sacramento-bright animate-bounce" />
-                <span>Hover satellites to sharpen depth; Click to engage workspace simulation</span>
+                <span>위성에 마우스를 올리면 흐릿한 심도가 또렷해집니다. 클릭하면 디테일 분석 콘솔을 실행합니다.</span>
               </div>
             </div>
 
@@ -570,7 +574,7 @@ export default function App() {
                 <span className="text-[10px] font-mono text-amber-400 bg-sacramento-light/20 px-2 py-0.5 rounded font-black tracking-widest">
                   {panels[3].tag}
                 </span>
-                <span className="text-[10px] font-mono text-slate-600 block">Z // MIDGROUND</span>
+                <span className="text-[10px] font-mono text-slate-600 block">Z // 중간 스페이스 노드</span>
               </div>
               
               <h2 className="text-base font-display font-extrabold tracking-wide text-white flex items-center gap-2">
@@ -583,11 +587,11 @@ export default function App() {
               </p>
 
               {/* Panel stats */}
-              <div className="grid grid-cols-2 gap-2 mt-4 pt-3.5 border-t border-sacramento-light/20 text-[10px] font-mono">
+              <div className="grid grid-cols-3 gap-1 mt-4 pt-3.5 border-t border-sacramento-light/20 text-[9px] font-mono leading-tight">
                 {panels[3].stats.map(s => (
                   <div key={s.label}>
-                    <span className="text-slate-600 block">{s.label}</span>
-                    <span className="text-slate-300 font-bold block mt-0.5">{s.value}</span>
+                    <span className="text-slate-500 block truncate" title={s.label}>{s.label}</span>
+                    <span className="text-amber-400 font-extrabold block mt-0.5 truncate" title={s.value}>{s.value}</span>
                   </div>
                 ))}
               </div>
@@ -611,7 +615,7 @@ export default function App() {
                 <span className="text-[10px] font-mono text-[#10b981] bg-sacramento-light/20 px-2 py-0.5 rounded font-black tracking-widest">
                   {panels[2].tag}
                 </span>
-                <span className="text-[10px] font-mono text-slate-600 block">Z // FOREGROUND (CLOSER)</span>
+                <span className="text-[10px] font-mono text-slate-600 block">Z // 밀착 전방 노드</span>
               </div>
               
               <h2 className="text-base font-display font-extrabold tracking-wide text-white flex items-center gap-2">
@@ -624,11 +628,11 @@ export default function App() {
               </p>
 
               {/* Panel stats */}
-              <div className="grid grid-cols-2 gap-2 mt-4 pt-3.5 border-t border-sacramento-light/20 text-[10px] font-mono">
+              <div className="grid grid-cols-3 gap-1 mt-4 pt-3.5 border-t border-sacramento-light/20 text-[9px] font-mono leading-tight">
                 {panels[2].stats.map(s => (
                   <div key={s.label}>
-                    <span className="text-slate-600 block">{s.label}</span>
-                    <span className="text-slate-300 font-bold block mt-0.5">{s.value}</span>
+                    <span className="text-slate-500 block truncate" title={s.label}>{s.label}</span>
+                    <span className="text-[#10b981] font-extrabold block mt-0.5 truncate" title={s.value}>{s.value}</span>
                   </div>
                 ))}
               </div>
@@ -641,13 +645,13 @@ export default function App() {
           <div className="w-full max-w-5xl md:py-10 space-y-8 animate-fade-in">
             <div className="text-center max-w-xl mx-auto space-y-3">
               <span className="text-[10px] font-mono text-sacramento-bright uppercase tracking-widest bg-sacramento-light/20 px-3 py-1 rounded">
-                Matrix Mode Grid Display
+                KION Labs 자율 매트릭스
               </span>
-              <h1 className="text-2xl md:text-3xl font-display font-black text-white uppercase">
-                INTELLIGENT COMMAND CONSOLE
+              <h1 className="text-2xl md:text-3xl font-display font-black text-white uppercase font-sans">
+                KION Labs 통합 통제 센터
               </h1>
-              <p className="text-xs text-slate-400 leading-relaxed">
-                A streamlined multi-module outline engineered to quickly review telemetry registers, run benchmark trials, test prompt behaviors, and construct server nodes on optimized Sacramento Green assets.
+              <p className="text-xs text-slate-400 leading-relaxed font-sans">
+                KION Labs의 대표적인 프로젝트 실무 사례, 교육 트랙 워크숍 정보, 실시간 인공지능 성능 벤치마크 모델 대결 및 원격 데이터 지표를 직관적으로 조감합니다.
               </p>
             </div>
 
@@ -674,7 +678,7 @@ export default function App() {
                         <span className="text-[9px] font-mono px-2 py-0.5 bg-sacramento-light/35 text-white/90 rounded tracking-wider">
                           {p.tag}
                         </span>
-                        <span className="text-[10px] text-slate-500 font-mono italic">ENGAGE REGISTER</span>
+                        <span className="text-[10px] text-slate-500 font-mono italic">세부 제어 가동</span>
                       </div>
 
                       <h3 className="text-base font-display font-extrabold text-white flex items-center gap-2">
@@ -687,11 +691,11 @@ export default function App() {
                       </p>
                     </div>
 
-                    <div className="grid grid-cols-2 gap-3 mt-5 pt-3 border-t border-sacramento-light/15 text-[10px] font-mono">
+                    <div className="grid grid-cols-3 gap-2 mt-5 pt-3 border-t border-sacramento-light/15 text-[9.5px] font-mono leading-tight">
                       {p.stats.map(s => (
                         <div key={s.label}>
-                          <span className="text-slate-500 block">{s.label}</span>
-                          <span className="text-slate-300 font-bold block mt-0.5">{s.value}</span>
+                          <span className="text-slate-500 block truncate" title={s.label}>{s.label}</span>
+                          <span className="text-[#10b981] font-bold block mt-0.5 truncate" title={s.value}>{s.value}</span>
                         </div>
                       ))}
                     </div>
@@ -713,7 +717,7 @@ export default function App() {
             <div className="bg-sacramento-deep px-5 py-4 border-b border-sacramento-light/50 flex justify-between items-center text-xs font-mono">
               <div className="flex items-center gap-2.5">
                 <span className="w-2 h-2 rounded-full bg-sacramento-bright animate-pulse" />
-                <span className="text-slate-400">SECURE CONSOLE TERMINAL // ACTIVE_MODULE:</span>
+                <span className="text-slate-400">보안 통제 콘솔 // 활성화 세션:</span>
                 <span className="text-white font-bold uppercase tracking-wider bg-sacramento-light/25 px-2 py-0.5 rounded">
                   {panels.find(p => p.id === activePanelWorkspace)?.title}
                 </span>
@@ -723,7 +727,7 @@ export default function App() {
                 className="bg-sacramento-light/30 hover:bg-rose-500/20 text-slate-300 hover:text-rose-400 p-1.5 rounded-lg border border-sacramento-light/25 hover:border-rose-500/35 transition cursor-pointer flex items-center gap-1.5 font-sans font-bold text-[11px]"
               >
                 <X className="w-4 h-4" />
-                <span>DISCONNECT SECTOR</span>
+                <span>관제 모듈 연결 닫기</span>
               </button>
             </div>
 
@@ -737,10 +741,10 @@ export default function App() {
 
             {/* Modal Bottom Status Bar */}
             <div className="bg-sacramento-deep/50 px-5 py-3 border-t border-sacramento-light/20 flex flex-col sm:flex-row justify-between items-center gap-2 text-[10px] font-mono text-slate-500">
-              <span>SYSTEM ENCRYPTED LOG CHANNEL // ID: {activePanelWorkspace.toUpperCase()}_PIPELINE_ROUTING</span>
+              <span>관제 암호화 보안 로그 계통 // 노드 ID: {activePanelWorkspace.toUpperCase()}_PIPELINE_ROUTING</span>
               <div className="flex gap-4">
-                <span>SECTOR LATENCY: {systemState.networkLatency}ms</span>
-                <span>STATE STATUS: CORE_CONNECTED</span>
+                <span>통합 개발 속도 주기: {(18 + (systemState.networkLatency % 3) * 0.1).toFixed(1)}일 완성</span>
+                <span>관제 지보 자원: KION Labs 클라우드 세션 정상 연결됨</span>
               </div>
             </div>
 
@@ -752,12 +756,12 @@ export default function App() {
       <footer className="w-full bg-sacramento-dark/95 border-t border-sacramento-light/40 backdrop-blur-md px-6 py-3.5 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-slate-500 font-mono z-25">
         <div className="flex items-center gap-2">
           <Terminal className="w-4 h-4 text-sacramento-bright" />
-          <span>© 2026 NEXUS COGNITIVE INC — SACRAMENTO PLATFORM DESIGN</span>
+          <span>© 2026 KION Labs (키온 랩스) — 새크라멘토 플랫폼 시스템 디자인</span>
         </div>
         <div className="flex gap-4">
-          <span className="hover:text-white transition cursor-pointer">TERMS // NODE</span>
-          <span className="hover:text-white transition cursor-pointer">PRIVACY // SECURE</span>
-          <span className="hover:text-white transition cursor-pointer">API // ACCESS</span>
+          <span className="hover:text-white transition cursor-pointer">이용 정보 규정</span>
+          <span className="hover:text-white transition cursor-pointer">개인정보 보안지침</span>
+          <span className="hover:text-white transition cursor-pointer">네트워크 API 접근명세</span>
         </div>
       </footer>
     </div>

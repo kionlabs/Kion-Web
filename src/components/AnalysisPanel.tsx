@@ -87,9 +87,9 @@ export default function AnalysisPanel() {
           <Activity className="w-8 h-8" />
         </div>
         <div>
-          <h3 className="text-xl font-display font-bold text-white tracking-wide">AI Analytical Insight Engine</h3>
-          <p className="text-xs text-slate-400 mt-1">
-            Real-time server telemetry tracking latency curves, model performance anomalies, and optimization routing parameters.
+          <h3 className="text-xl font-display font-bold text-white tracking-wide">인공지능 다차원 분석 예측 엔진 (AI Analytical Insight Engine)</h3>
+          <p className="text-xs text-slate-400 mt-1 font-sans">
+            지상국 서버 원격 정밀 감시(Telemetry) 시스템을 가동하여 지연율 곡선 덤프, 하드 인공지능 이상 증후군, 파티션 라우팅 최적화 지형을 실시간으로 추정합니다.
           </p>
         </div>
       </div>
@@ -99,7 +99,7 @@ export default function AnalysisPanel() {
         <div className="lg:col-span-4 space-y-4">
           <div className="space-y-2">
             <span className="text-xs uppercase font-mono tracking-wider text-sacramento-bright font-bold block mb-1">
-              Select Core Telemetry Stream
+              원격 실시간 지표 분기 선택
             </span>
             {(['latency', 'throughput', 'cost'] as const).map((metric) => (
               <button
@@ -111,7 +111,9 @@ export default function AnalysisPanel() {
                     : 'bg-sacramento-deep/50 border-sacramento-light/20 hover:border-sacramento-light text-slate-400 hover:text-slate-200'
                 }`}
               >
-                <span className="capitalize">{metric === 'cost' ? 'Inference Spend (cents)' : metric === 'latency' ? 'Inbound Latency (ms)' : 'Total Throughput (ops/s)'}</span>
+                <span className="capitalize text-[11px] font-sans font-semibold">
+                  {metric === 'cost' ? '추론 과금 점유 Spend (cents)' : metric === 'latency' ? '시스템 한계 응답 지연 Latency (ms)' : '단두 처리량 한계성 Throughput (ops/s)'}
+                </span>
                 <ArrowUpRight className="w-3.5 h-3.5" />
               </button>
             ))}
@@ -119,22 +121,22 @@ export default function AnalysisPanel() {
 
           <div className="bg-sacramento-dark/90 p-4 rounded-lg border border-sacramento-light/25 space-y-3.5 font-mono">
             <h4 className="text-xs font-bold uppercase tracking-widest text-[#10b981] flex items-center gap-1.5 border-b border-sacramento-light/20 pb-2">
-              <Cpu className="w-4 h-4" /> Telemetry HUD
+              <Cpu className="w-4 h-4" /> 시스템 정보 원격 감시 HUD
             </h4>
             
             <div className="flex justify-between text-xs">
-              <span className="text-slate-500">Pipeline Efficiency:</span>
+              <span className="text-slate-500">파이프라인 효율 등급:</span>
               <span className="text-white font-bold">{efficiencyRating}%</span>
             </div>
             
             <div className="flex justify-between text-xs">
-              <span className="text-slate-500">Hourly Queries:</span>
+              <span className="text-slate-500">시간당 유량 누적 처리수:</span>
               <span className="text-emerald-400 font-bold">{activeCounter.toLocaleString()}</span>
             </div>
 
             <div className="flex justify-between text-xs">
-              <span className="text-slate-500">Node Speed Profile:</span>
-              <span className="text-white font-bold">OPTIMAL</span>
+              <span className="text-slate-500">연산 분배기 속도 상태:</span>
+              <span className="text-white font-bold font-sans">최적 가동 중</span>
             </div>
           </div>
         </div>
@@ -144,7 +146,10 @@ export default function AnalysisPanel() {
           <div className="bg-sacramento-deep border border-sacramento-light/35 rounded-xl p-4 flex-1 flex flex-col justify-between">
             <div className="flex justify-between items-center border-b border-sacramento-light/20 pb-3 mb-2">
               <span className="text-xs uppercase font-mono tracking-wider text-slate-400">
-                Hourly Metric: <span className="text-white capitalize font-bold">{currentMetric}</span>
+                시간 범위 연산 지표:{' '}
+                <span className="text-white capitalize font-bold font-sans">
+                  {currentMetric === 'cost' ? '추론 과금액' : currentMetric === 'latency' ? '수신 지연율' : '누적 통과량'}
+                </span>
               </span>
               <div className="flex gap-2">
                 <button
@@ -153,13 +158,13 @@ export default function AnalysisPanel() {
                   className="bg-sacramento-bright text-sacramento-deep hover:bg-white text-xs px-3.5 py-1.5 rounded font-sans font-bold flex items-center gap-1 transition disabled:opacity-50 cursor-pointer"
                 >
                   <RefreshCw className={`w-3 h-3 ${isOptimizing ? 'animate-spin' : ''}`} />
-                  {isOptimizing ? 'Optimizing...' : 'Run Optimization'}
+                  {isOptimizing ? '분산 최적 연산중...' : '인프라 자율 압축 다변화 구동'}
                 </button>
                 <button
                   onClick={handleReset}
-                  className="bg-sacramento-light/20 hover:bg-sacramento-light/40 text-slate-300 text-[11px] px-2 py-1 rounded font-mono transition"
+                  className="bg-sacramento-light/20 hover:bg-sacramento-light/40 text-slate-300 text-[11px] px-2 py-1 rounded font-mono transition cursor-pointer"
                 >
-                  Reset
+                  원래 상태로 환원
                 </button>
               </div>
             </div>
@@ -197,7 +202,7 @@ export default function AnalysisPanel() {
 
                 {/* Underfill Area */}
                 {areaD && (
-                  <path 
+                   <path 
                     d={areaD} 
                     fill="url(#chartGradient)" 
                     className="transition-all duration-500"
@@ -263,8 +268,8 @@ export default function AnalysisPanel() {
           
           <div className="bg-sacramento-light/10 border border-sacramento-light/20 p-3 rounded-lg flex items-center gap-2.5 text-xs text-slate-400">
             <ShieldCheck className="w-5 h-5 text-sacramento-bright shrink-0" />
-            <span>
-              <strong>Note on Sweep:</strong> Initiating an active optimization cycle triggers a code-compactor routine that merges redundant API endpoints, safely dropping overall latencies by approximately 25-30%.
+            <span className="font-sans leading-relaxed">
+              <strong>스위핑 기법 특성:</strong> 인프라 최적 연산을 작동시켜 소스 패킹을 지휘하면 불필요하게 낭비되는 엔드포인트를 하나의 흐름으로 가상 응집하여, 시스템의 평균 수신 지연(Latency) 속도를 안전하게 25%~30% 감소시킵니다.
             </span>
           </div>
         </div>

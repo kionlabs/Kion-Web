@@ -1,6 +1,6 @@
 {
-  "name": "AI Control Tower",
-  "description": "An interactive Centered Radial Command Center for AI Education, Custom Development, Data Analysis, and Competitions, styled in a deep Sacramento Green theme.",
+  "name": "KION Labs",
+  "description": "KION Labs: AI 교육과 커스텀 개발의 통합 관제소. 새크라멘토 그린 테마 기반의 프리미엄 3D 방사형 지휘 통제 콘솔 플랫폼.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }

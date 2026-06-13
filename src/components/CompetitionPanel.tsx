@@ -13,7 +13,7 @@ interface ContenderModel {
 
 const MODELS: ContenderModel[] = [
   { name: 'Gemini 2.5 Pro Ultra', provider: 'Google Core', reasoning: 98, coding: 97, speed: 92, costMetric: '$$', rank: 1 },
-  { name: 'Custom Finetuned 8B', provider: 'Nexus Local', reasoning: 86, coding: 90, speed: 98, costMetric: '$', rank: 3 },
+  { name: 'Custom Finetuned 8B', provider: 'KION Labs Local', reasoning: 86, coding: 90, speed: 98, costMetric: '$', rank: 3 },
   { name: 'Claude Opus v4', provider: 'Anthropic Inc', reasoning: 95, coding: 94, speed: 71, costMetric: '$$$', rank: 2 },
   { name: 'GPT-Alpha-Retro', provider: 'OpenAI Lab', reasoning: 91, coding: 88, speed: 85, costMetric: '$$', rank: 4 },
 ];
@@ -32,10 +32,10 @@ export default function CompetitionPanel() {
     setWinnerMessage('');
     
     const categories = [
-      { name: 'Logical Reasoning', weight: 0.3, valA: modelA.reasoning, valB: modelB.reasoning },
-      { name: 'Synthetic Code Speed', weight: 0.3, valA: modelA.coding, valB: modelB.coding },
-      { name: 'Inference Velocity', weight: 0.2, valA: modelA.speed, valB: modelB.speed },
-      { name: 'System Context Align', weight: 0.2, valA: Math.round(92 + Math.random() * 6), valB: Math.round(90 + Math.random() * 8) },
+      { name: '논리적 사고 추론력 (Logical Reasoning)', weight: 0.3, valA: modelA.reasoning, valB: modelB.reasoning },
+      { name: '통합 프로그래밍 코딩력 (Synthetic Coding)', weight: 0.3, valA: modelA.coding, valB: modelB.coding },
+      { name: '추론 발산 속도 인자 (Inference Velocity)', weight: 0.2, valA: modelA.speed, valB: modelB.speed },
+      { name: '지시 문맥 부합도 (System Context Alignment)', weight: 0.2, valA: Math.round(92 + Math.random() * 6), valB: Math.round(90 + Math.random() * 8) },
     ];
 
     const tempScores: { scoreA: number; scoreB: number; category: string }[] = [];
@@ -61,7 +61,7 @@ export default function CompetitionPanel() {
       const winner = totalA > totalB ? modelA : modelB;
       const confidence = Math.abs(totalA - totalB).toFixed(1);
 
-      setWinnerMessage(`🏆 Vector Duel Resolved. Winner: ${winner.name} (${winner.provider}) leads by ${confidence} points!`);
+      setWinnerMessage(`🏆 모델 지능 대결 판정 결과. 승리 모델: ${winner.name} (${winner.provider}) — 약 ${confidence}점 차로 상위 호환 우위 입증!`);
       setArenaState('done');
     }, (categories.length) * 850 + 400);
   };
@@ -73,9 +73,9 @@ export default function CompetitionPanel() {
           <Trophy className="w-8 h-8" />
         </div>
         <div>
-          <h3 className="text-xl font-display font-bold text-white tracking-wide">AI Model Arena</h3>
-          <p className="text-xs text-slate-400 mt-1">
-            Systematic benchmark evaluations. Duel and stress-test competitive weights on reasoning thresholds, token throughput speeds, and accuracy matrix nodes.
+          <h3 className="text-xl font-display font-bold text-white tracking-wide">인공지능 모델 결투 평가장 (AI Model Arena)</h3>
+          <p className="text-xs text-slate-400 mt-1 font-sans">
+            대형 언어 모델 간 계통적 벤치마크 평가를 분석합니다. 인지적 종합 추론 역량 한계치, 토큰 통과 속도 및 가역적 정밀성 가중치를 겨뤄 임계 성능을 비교 검증합니다.
           </p>
         </div>
       </div>
@@ -84,14 +84,14 @@ export default function CompetitionPanel() {
         {/* Left Column: Fighter Selectors */}
         <div className="lg:col-span-5 space-y-4">
           <div className="flex justify-between items-center text-xs uppercase font-mono tracking-wider text-sacramento-bright font-bold">
-            <span>Configure Fighters</span>
+            <span>벤치마크 대상 모델 쌍 구성</span>
             <Swords className="w-4 h-4" />
           </div>
 
           <div className="grid grid-cols-2 gap-3 pb-1">
             {/* Fighter A selection */}
             <div className="space-y-2">
-              <label className="text-[10px] font-mono text-slate-500 block uppercase">Fighter Left (A)</label>
+              <label className="text-[10px] font-mono text-slate-500 block uppercase">지정 모델 좌측 (A)</label>
               {MODELS.map((m) => (
                 <button
                   key={`left-${m.name}`}
@@ -116,7 +116,7 @@ export default function CompetitionPanel() {
 
             {/* Fighter B selection */}
             <div className="space-y-2">
-              <label className="text-[10px] font-mono text-slate-500 block uppercase">Fighter Right (B)</label>
+              <label className="text-[10px] font-mono text-slate-500 block uppercase">지정 모델 우측 (B)</label>
               {MODELS.map((m) => (
                 <button
                   key={`right-${m.name}`}
@@ -143,9 +143,9 @@ export default function CompetitionPanel() {
           <button
             onClick={runModelDuel}
             disabled={arenaState === 'simulating'}
-            className="w-full bg-gradient-to-r from-sacramento-light to-sacramento-bright text-white font-mono font-bold py-2.5 rounded-lg text-xs hover:brightness-110 shadow-md transition disabled:opacity-50 cursor-pointer uppercase tracking-wider"
+            className="w-full bg-gradient-to-r from-sacramento-light to-sacramento-bright text-white font-mono font-bold py-2.5 rounded-lg text-xs hover:brightness-110 shadow-md transition disabled:opacity-50 cursor-pointer uppercase tracking-wider font-sans"
           >
-            {arenaState === 'simulating' ? '🥊 EVALUATION RUNNING...' : '⚡ INITIATE DYNAMIC DUEL'}
+            {arenaState === 'simulating' ? '🥊 모델 간 실시간 성능 결투 분석 진행중...' : '⚡ 모델 벤치마크 가상 대결 구동'}
           </button>
         </div>
 
@@ -153,8 +153,8 @@ export default function CompetitionPanel() {
         <div className="lg:col-span-7 flex flex-col justify-between space-y-4">
           <div className="bg-sacramento-deep border border-sacramento-light/35 rounded-xl p-4 flex-1 flex flex-col justify-between h-72">
             <div className="text-[10px] font-mono text-slate-500 flex justify-between border-b border-sacramento-light/25 pb-2.5 mb-2">
-              <span>ARENA RESOLVER MATRIX // L_LATITUDE_99</span>
-              <span>{arenaState.toUpperCase()}</span>
+              <span>아레나 인지 비교 분석 매트릭스 // L_LATITUDE_99</span>
+              <span className="font-bold">{arenaState === 'idle' ? '대기' : arenaState === 'simulating' ? '시뮬레이션 연산중' : '결투 판정 완료'}</span>
             </div>
 
             {/* Head-to-Head HUD values */}
@@ -175,7 +175,7 @@ export default function CompetitionPanel() {
                 duelScores.map((score, i) => (
                   <div key={score.category} className="space-y-1 bg-sacramento-dark/40 p-2 rounded border border-sacramento-light/15 animate-fade-in">
                     <div className="flex justify-between items-center text-[10px] font-mono font-bold text-slate-300 mb-1">
-                      <span>{score.category}</span>
+                      <span className="font-sans font-semibold">{score.category}</span>
                     </div>
                     {/* Progress slider bars */}
                     <div className="grid grid-cols-2 gap-4 font-mono text-[9px]">
@@ -205,16 +205,16 @@ export default function CompetitionPanel() {
                 ))
               ) : (
                 <div className="h-full flex flex-col items-center justify-center text-center p-3 opacity-60">
-                  <Swords className="w-8 h-8 text-sacramento-light mb-2" />
-                  <span className="text-xs font-mono text-slate-500 italic block">Combat queue empty.</span>
-                  <span className="text-[10px] font-mono text-slate-600 mt-0.5 block">Select configurations and press "Initiate Dynamic Duel"</span>
+                  <Swords className="w-8 h-8 text-sacramento-light mb-2 animate-pulse" />
+                  <span className="text-xs font-sans text-slate-500 italic block">대기열 상 가용 대진 쌍이 부재합니다.</span>
+                  <span className="text-[10px] font-sans text-slate-600 mt-0.5 block">대결 구성을 설정하고 "모델 벤치마크 가상 대결 구동"을 작동하세요.</span>
                 </div>
               )}
             </div>
 
             {/* Victor block summary banner */}
             {winnerMessage && (
-              <div className="bg-sacramento-light/20 border border-sacramento-bright p-2.5 rounded-lg text-xs font-sans text-white text-center animate-fade-in mt-3">
+              <div className="bg-sacramento-light/20 border border-sacramento-bright p-2.5 rounded-lg text-xs font-sans text-white text-center animate-fade-in mt-3 leading-normal">
                 {winnerMessage}
               </div>
             )}
