@@ -25,14 +25,14 @@ import { PanelData, SystemStatus, InterfaceSettings } from './types';
 const INITIAL_PANELS: PanelData[] = [
   {
     id: 'education',
-    title: 'AI 리터러시 & 팀 성장 트랙',
-    subtitle: '커ри큘럼 설계 및 맞춤형 워크숍 프로그램',
-    description: '사내 AI 공화 언어 구축 프로그램 및 자동화 트레이닝 과정으로, 임직원의 실무 AI 활용 능력을 비약적으로 발동시키는 실습형 교육 연구실입니다.',
-    tag: 'AI 리터러시 교육 및 워크숍',
+    title: 'AI 실무 리터러시 & 팀 성장 트랙',
+    subtitle: '단순 학습을 넘어, 실무의 언어를 코딩하다',
+    description: '사내 AI 환경 구축 정합성 설계 과정 및 자동화 워크숍 교육으로, 임직원의 실제 업무 가용 리터러시를 최대 92% 수준까지 가동시키는 트레이닝 연구실입니다.',
+    tag: 'AI 실무 리터러시 트랙',
     stats: [
-      { label: '사내 AI 언어 구축', value: '지원 완료' },
-      { label: '자동화 워크숍', value: '누적 35회' },
-      { label: '임직원 리터러시', value: '92% 달성' }
+      { label: '임직원 학습 효율', value: '92% 향상' },
+      { label: '업무 자동화 가동', value: '3배 속도 개선' },
+      { label: '수강 피드백 만족', value: '98.2% 평치' }
     ],
     depth: 'background',
     blur: 2.5,
@@ -43,14 +43,14 @@ const INITIAL_PANELS: PanelData[] = [
   },
   {
     id: 'development',
-    title: '에이전트 개발 스튜디오',
-    subtitle: '지능형 자동화 파이프라인 및 사설 백엔드',
-    description: '기업의 복잡한 업무 프로세스를 자동화 앱으로 재개발하고, 데이터 흐름에 실시간 밀착 반응하는 최적의 통합 내부 도구 인프라를 지휘합니다.',
-    tag: '업무 자동화 및 개발 스튜디오',
+    title: '커스텀 에이전트 & 통합 웹솔루션',
+    subtitle: '상상을 실무 도구로 바꾸는 커스텀 엔진',
+    description: '기업 수작업 병목 지점에 직결되는 1대1 맞춤 수작업 차단 백엔드 솔루션 및 데이터 연동 API 파이프라인 개발 엔진입니다.',
+    tag: '커스텀 개발 스튜디오',
     stats: [
-      { label: '업무 자동화 앱', value: '12개 완료' },
-      { label: '데이터 기반 내부 도구', value: '8개 가동' },
-      { label: '평균 개발 주기', value: '18일 완성' }
+      { label: '맞춤 솔루션 아키텍처', value: '설계 완결' },
+      { label: '업무 툴 API 연동', value: '무결 자동지향' },
+      { label: '평균 개발 주기', value: '14일 MVP 완성' }
     ],
     depth: 'midground',
     blur: 1.0,
@@ -61,14 +61,14 @@ const INITIAL_PANELS: PanelData[] = [
   },
   {
     id: 'analysis',
-    title: '데이터 원격 인프라 분석기',
-    subtitle: '초고속 데이터 기획 및 시범 운영 최적화',
-    description: '문화데이터 공모전 프로젝트의 압도적인 대상 수상 이력 등 검증된 MVP 자율 Fast Build 역량을 동원하여 PoC 완료율을 극한으로 수렴시킵니다.',
-    tag: '공모전 및 MVP 개발',
+    title: '비즈니스 정밀 데이터 예측 분석기',
+    subtitle: '감(感)이 아닌 데이터로 결정하는 전략',
+    description: '검색 의도 마이닝, 블로그 및 플레이스 위치 데이터 정밀 매치, 24/7 이탈 흐름 분석을 통합 구사하여 비즈니스 의사 결정을 보증하는 원격 인텔리전스입니다.',
+    tag: '예측 데이터 인텔리전스',
     stats: [
-      { label: '문화데이터 공모전', value: '성공 완료' },
-      { label: '프로젝트 PoC', value: '완성 입증' },
-      { label: 'MVP Fast Build', value: '자율 가동' }
+      { label: '블로그 가시성 지수', value: '82.4% 확보' },
+      { label: '플레이스 전환 가동', value: 'CTR 4.85%' },
+      { label: '인프라 대응력', value: '24/7 자율 추적' }
     ],
     depth: 'foreground',
     blur: 0,
@@ -79,14 +79,14 @@ const INITIAL_PANELS: PanelData[] = [
   },
   {
     id: 'competition',
-    title: 'AI 아레나 검증 매트릭스',
-    subtitle: '정합성 기반 실시간 경쟁 분석 매커니즘',
-    description: '블로그 및 네이버 플레이스 데이터의 정밀 실시간 경쟁 구도를 파악하고, 예측 고객의 액션 전환 신호를 자율 분석하여 마케팅 무결 지형을 다룹니다.',
-    tag: '경쟁 비교 분석 및 탐지',
+    title: 'AI 실증 개발 & 성공 매트릭스',
+    subtitle: '승리하는 프로젝트를 만드는 메커니즘',
+    description: '전국 공모전 연속 수상으로 검증된 초고속 MVP 프로토타이핑 설계와 가역 PoC를 활용해 완벽하게 승리하는 성과 정합성 제어 메커니즘입니다.',
+    tag: '실전 MVP & PoC 빌더',
     stats: [
-      { label: '블로그/플레이스 경쟁', value: '정교 분석' },
-      { label: '전환 신호 분석', value: '추적 실증' },
-      { label: '추론 예측 정확도', value: '99.1%' }
+      { label: '공모전/아레나 승률', value: '100% 승격' },
+      { label: 'MVP/PoC 제품 전환 타당', value: '100% 성공' },
+      { label: '업무 연동 API 정밀성', value: '부하 0.02% 미만' }
     ],
     depth: 'midground',
     blur: 1.5,
@@ -127,11 +127,16 @@ export default function App() {
   // DOM elements tracking for reactive network lines
   const containerRef = useRef<HTMLDivElement>(null);
   const centerRef = useRef<HTMLDivElement>(null);
+  const educationRef = useRef<HTMLDivElement>(null);
+  const developmentRef = useRef<HTMLDivElement>(null);
+  const analysisRef = useRef<HTMLDivElement>(null);
+  const competitionRef = useRef<HTMLDivElement>(null);
+
   const panelRefMap = {
-    education: useRef<HTMLDivElement>(null),
-    development: useRef<HTMLDivElement>(null),
-    analysis: useRef<HTMLDivElement>(null),
-    competition: useRef<HTMLDivElement>(null)
+    education: educationRef,
+    development: developmentRef,
+    analysis: analysisRef,
+    competition: competitionRef
   };
 
   const [lineCoords, setLineCoords] = useState<{
@@ -153,22 +158,26 @@ export default function App() {
 
   // Soft mouse lag interpolation for satisfyingly luxurious inertia physics
   useEffect(() => {
+    let frameId: number;
     const interpolationLoop = () => {
       setMousePos(prev => {
         const dx = targetMousePos.x - prev.x;
         const dy = targetMousePos.y - prev.y;
+        if (Math.abs(dx) < 0.0001 && Math.abs(dy) < 0.0001) {
+          return prev;
+        }
         return {
           x: prev.x + dx * 0.08,
           y: prev.y + dy * 0.08
         };
       });
-      requestAnimationFrame(interpolationLoop);
+      frameId = requestAnimationFrame(interpolationLoop);
     };
-    const frameId = requestAnimationFrame(interpolationLoop);
+    frameId = requestAnimationFrame(interpolationLoop);
     return () => cancelAnimationFrame(frameId);
   }, [targetMousePos]);
 
-  // Recalculates the SVG connecting wire endpoints reactively based on DOM metrics
+  // Recalculates the static SVG connecting wire endpoints based on DOM metrics
   const recalculateWires = () => {
     if (!containerRef.current || !centerRef.current) return;
     const parentRect = containerRef.current.getBoundingClientRect();
@@ -182,15 +191,33 @@ export default function App() {
       const el = panelRefMap[key].current;
       if (el) {
         const pRect = el.getBoundingClientRect();
-        const px = pRect.left + pRect.width / 2 - parentRect.left;
-        const py = pRect.top + pRect.height / 2 - parentRect.top;
-        coords[key] = { x1: cx, y1: cy, x2: px, y2: py };
+        const panel = panels.find(p => p.id === key);
+        if (panel) {
+          const travelMultipliers = {
+            foreground: -24,
+            midground: -12,
+            background: 4
+          };
+          const multiplier = travelMultipliers[panel.depth] * settings.parallaxStrength;
+          
+          // Reverse-engineer the static baseline panel center by subtracting active mouse-depth transforms
+          const xParallax = mousePos.x * multiplier;
+          const yParallax = mousePos.y * multiplier;
+
+          const pxDynamic = pRect.left + pRect.width / 2 - parentRect.left;
+          const pyDynamic = pRect.top + pRect.height / 2 - parentRect.top;
+
+          const pxStatic = pxDynamic - xParallax;
+          const pyStatic = pyDynamic - yParallax;
+
+          coords[key] = { x1: cx, y1: cy, x2: pxStatic, y2: pyStatic };
+        }
       }
     });
     setLineCoords(coords);
   };
 
-  // Wire calculations bound to transitions, drags, and resize sweeps
+  // Wire calculations bound ONLY to structural transitions/resizes (fully immune to mouse move thrashing!)
   useEffect(() => {
     recalculateWires();
     // Re-poll shortly to capture final positions after initial rendering and CSS stabilization
@@ -201,7 +228,7 @@ export default function App() {
       window.removeEventListener('resize', recalculateWires);
       clearTimeout(delayTimer);
     };
-  }, [panels, settings.viewMode, mousePos]);
+  }, [panels, settings.viewMode]);
 
   // Handle tracking client bounding cursor coords
   const handleMouseMove = (e: React.MouseEvent) => {
@@ -281,8 +308,27 @@ export default function App() {
           </defs>
 
           {settings.viewMode === '3D' && lineCoords && Object.keys(lineCoords).map(key => {
-            const coords = lineCoords[key];
-            if (!coords) return null;
+            const staticCoords = lineCoords[key];
+            if (!staticCoords) return null;
+
+            const panel = panels.find(p => p.id === key);
+            if (!panel) return null;
+
+            const travelMultipliers = {
+              foreground: -24,
+              midground: -12,
+              background: 4
+            };
+            const multiplier = travelMultipliers[panel.depth] * settings.parallaxStrength;
+            const xParallax = mousePos.x * multiplier;
+            const yParallax = mousePos.y * multiplier;
+
+            const coords = {
+              x1: staticCoords.x1,
+              y1: staticCoords.y1,
+              x2: staticCoords.x2 + xParallax,
+              y2: staticCoords.y2 + yParallax
+            };
 
             const isHighlighted = hoveredPanelId === key;
             const strokeColor = isHighlighted ? '#10b981' : 'rgba(22, 91, 68, 0.45)';
